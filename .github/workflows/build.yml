@@ -63,7 +63,7 @@ jobs:
           sha=`sha256sum mihon-r${{ env.COMMIT_COUNT }}.apk | awk '{ print $1 }'`
           echo "APK_UNIVERSAL_SHA=$sha" >> $GITHUB_ENV
 
-          mv app/build/outputs/apk/foss/app-universal-foss-unsigned-signed.apk mihon-r${{ env.COMMIT_COUNT }}-foss.apk
+          mv app/build/outputs/apk/release/app-universal-foss-unsigned-signed.apk mihon-r${{ env.COMMIT_COUNT }}-foss.apk
           sha=`sha256sum mihon-r${{ env.COMMIT_COUNT }}-foss.apk | awk '{ print $1 }'`
           echo "APK_UNIVERSAL_FOSS_SHA=$sha" >> $GITHUB_ENV
 
